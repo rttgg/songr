@@ -1,4 +1,4 @@
-package com.gebrehiwot.songr;
+package com.gebrehiwot.songr.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,11 +37,11 @@ public class HomeController {
         return "getreverse";
     }
     //helper method for get reverse
-    public String getReverse(String word){
-        String[] str = word.split(" ");
+    public String getReverse(String word){ // n is the number of words
+        String[] str = word.split(" "); // takes n time
         String getreverse = new String();
-        for(int i = str.length - 1; i >=0; i--){
-            getreverse = getreverse + str[i] + " ";
+        for(int i = str.length - 1; i >=0; i--){ // loop runs n times
+            getreverse = getreverse + str[i] + " "; // n, because concatenating strings takes as long as the strings are long
         }
         return getreverse.trim();
 
