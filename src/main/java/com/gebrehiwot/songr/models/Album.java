@@ -1,7 +1,9 @@
 package com.gebrehiwot.songr.models;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Album {
@@ -12,29 +14,12 @@ public class Album {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     long id;
-    @OneToMany(mappedBy = "album")
-    List<Song> songs;
-
     String title;
     String artist;
-    short songCount;
-    long length;
+    int songCount;
+    double length;
     String imageUrl;
 
-
-
-
-    public Album(){}
-    public Album (String title, String artist, short songCount, long length, String imageUrl){
-        this.title = title;
-        this.artist = artist;
-        this.songCount = songCount;
-        this.length = length;
-        this.imageUrl = imageUrl;
-    }
-
-
-//Getters
     public String getArtist() {
         return artist;
     }
@@ -47,11 +32,11 @@ public class Album {
         return imageUrl;
     }
 
-    public long getLength() {
+    public double getLength() {
         return length;
     }
 
-    public short getSongCount() {
+    public int getSongCount() {
         return songCount;
     }
 
@@ -59,28 +44,15 @@ public class Album {
         return id;
     }
 
-    public List<Song> getSongs() {
-        return songs;
-    }
-
-    public void setTitle(String title) {
+    public Album(){}
+    public Album (String title, String artist, int songCount, double length, String imageUrl){
         this.title = title;
-    }
-
-    public void setArtist(String artist) {
         this.artist = artist;
-    }
-
-    public void setSongCount(short songCount) {
         this.songCount = songCount;
-    }
-
-    public void setLength(long length) {
         this.length = length;
-    }
-
-    public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
+
 
 }
