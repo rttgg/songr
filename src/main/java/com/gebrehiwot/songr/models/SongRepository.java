@@ -1,6 +1,6 @@
-package com.gebrehiwot.songr.models;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public interface SongRepository extends JpaRepository<Song, Long> {
-}
+//package com.gebrehiwot.songr.models;
+//
+//import org.springframework.data.jpa.repository.JpaRepository;
+//
+//public interface SongRepository extends JpaRepository<Song, Long> {
+//}
