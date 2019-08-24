@@ -1,0 +1,27 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>All the songs on the Album</title>
+
+    </head>
+    <body>
+      <h1 th:text="${album.title}"></h1>
+
+      <div th:each="song: ${album.songs}">
+
+        <h3 th:text="${song.title}"></h3>
+
+        </div>
+
+    <h2>Add a new song in this album</h2>
+        <form method="POST" th:action="${'/albums/' + album.id + '/songs'}">
+            Title:<input name="title" />
+            Track number of songs:<input type="number" name="trackNumber" />
+            How long is the Songs:<input name="length" />
+            <input type="submit" />
+        </form>
+
+    </body>
+    </html>
+
