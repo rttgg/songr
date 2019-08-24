@@ -1,3 +1,4 @@
+
 package com.gebrehiwot.songr.controllers;
 
 
@@ -33,14 +34,7 @@ public class SongController {
         return "allSongs";
 
     }
-//    @PostMapping("/songs")
-//    public RedirectView addSongs(String title, long length, long trackNumber, @PathVariable long id){
-//        Album a = albumRepository.findById(id).get();
-//
-//        Song song = new Song(title, length, trackNumber, a);
-//        songRepository.save(song);
-//        return new RedirectView("/songs");
-//    }
+
 
     @PostMapping("/albums/{id}/songs")
     public RedirectView addingSongs(String title, long length, long trackNumber, @PathVariable long id){
@@ -54,3 +48,4 @@ public class SongController {
 
 
 }
+

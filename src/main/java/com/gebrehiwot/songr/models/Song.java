@@ -1,3 +1,4 @@
+
 package com.gebrehiwot.songr.models;
 
 
@@ -43,3 +44,4 @@ public class Song {
         return album;
     }
 }
+

@@ -46,3 +46,6 @@ Routes
 
 * /albums: will display all albums in database
 * includes POST route to add new albums to the database and redirects to /albums to display
+
+### Reference 
+* Class Demo https://github.com/codefellows/seattle-java-401d5/tree/master/class-12/introToSpringDemo

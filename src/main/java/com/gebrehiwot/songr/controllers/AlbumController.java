@@ -39,6 +39,7 @@ public class AlbumController {
         Album a = new Album(title, artist, songCount,length,imageUrl);
         albumRepository.save(a);
         return new RedirectView("/albums");
+
     }
 
     @GetMapping("/albums/{id}")
@@ -50,4 +51,7 @@ public class AlbumController {
         return "oneAlbum";
     }
 
+}
+
+    }
 }
