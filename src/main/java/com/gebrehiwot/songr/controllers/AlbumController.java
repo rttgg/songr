@@ -2,6 +2,7 @@ package com.gebrehiwot.songr.controllers;
 
 import com.gebrehiwot.songr.models.Album;
 import com.gebrehiwot.songr.models.AlbumRepository;
+import com.gebrehiwot.songr.models.Song;
 import com.gebrehiwot.songr.models.SongRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -44,6 +45,8 @@ public class AlbumController {
     public String getOneAlbum(@PathVariable long id, Model m){
         Album a = albumRepository.findById(id).get();
         m.addAttribute("album", a);
+        List<Song> songs = songRepository.findByAlbum(a);
+        m.addAttribute("songs", songs);
         return "oneAlbum";
     }
 

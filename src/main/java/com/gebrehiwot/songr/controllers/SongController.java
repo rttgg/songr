@@ -33,17 +33,24 @@ public class SongController {
         return "allSongs";
 
     }
-    @PostMapping("/songs")
-    public RedirectView addSongs(String title, long length, long trackNumber, @PathVariable long id){
-        Album a = albumRepository.findById(id).get();
-//        if(a == null){
-//            a = new Album();
-//            albumRepository.save(a);
+//    @PostMapping("/songs")
+//    public RedirectView addSongs(String title, long length, long trackNumber, @PathVariable long id){
+//        Album a = albumRepository.findById(id).get();
 //
-//        }
-        Song song = new Song(title, length, trackNumber, a);
-        songRepository.save(song);
-        return new RedirectView("/songs");
+//        Song song = new Song(title, length, trackNumber, a);
+//        songRepository.save(song);
+//        return new RedirectView("/songs");
+//    }
+
+    @PostMapping("/albums/{id}/songs")
+    public RedirectView addingSongs(String title, long length, long trackNumber, @PathVariable long id){
+        Album a = albumRepository.findById(id).get();
+        Song s = new Song(title, length, trackNumber, a);
+                songRepository.save(s);
+                return new RedirectView("/albums/" + id);
     }
+
+
+
 
 }
