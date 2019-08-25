@@ -8,8 +8,13 @@
 
 
 
+<<<<<<< HEAD
         @Id
             @GeneratedValue(strategy = GenerationType.IDENTITY)
+=======
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+>>>>>>> c87a8839fb13643e0213e5bdee76662320561eaa
 
         long id;
         String title;
@@ -59,4 +64,8 @@
 
 
 
+<<<<<<< HEAD
     }
+=======
+}
+>>>>>>> c87a8839fb13643e0213e5bdee76662320561eaa
