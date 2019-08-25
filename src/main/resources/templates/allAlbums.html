@@ -4,11 +4,21 @@
     <head>
         <meta charset="UTF-8">
         <title>All Albums</title>
+        <style>
+            div {
+                width: 320px;
+                padding-left: 100px;
+                border: 5px solid;
+                margin: 10px;
+            }
+        </style>
     </head>
-    <body>
+    <body style="background-color: darkgray; padding-left: 100px;">
     <h1>All the Albums</h1>
     <div th:each="album : ${albums}">
-        <a th:href="'/albums/' + ${album.id}">
+
+        <a th:href="'/albums/' + ${album.id}" >
+            <img th:src="${album.imageUrl}" style="width: 100px; height: 100px;">
             <h3 th:text="${album.title}">Album Title</h3>
         </a>
         <p>
@@ -17,12 +27,15 @@
     </div>
 
     <div>
-        <form method="POST" action="/albums">
-           Title:<input name="title" />
-           Artist:<input name="artist" />
-           Number of Songs:<input type="count" name="songCount" />
-            How long is the Songs:<input name="length" />
-            <input type="submit" />
+        <form method="POST" action="/albums"><br>
+           Title:<input name="title" /><br><br>
+           Artist:<input name="artist" /><br><br>
+           Number of Songs:<input type="count" name="songCount" /><br><br>
+            How long is the Songs:<input name="length" /><br><br>
+            Album Image: <input type="url" name="imageUrl"/>
+<!--            Album Image:<br><img src="https://images-na.ssl-images-amazon.com/images/I/71qwQLtuB%2BL._SL1200_.jpg"-->
+<!--                                 alt="Artist" style="width: 100px; height: 100px;"><br><br>-->
+            <input type="submit" /><br>
         </form>
     </div>
     </body>

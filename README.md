@@ -24,12 +24,22 @@
 ### controllers
 * HomeController.java
 * AlbumController.java
+* SongController.java
+
+### models
+* Album
+* AlbumRepository
+* Song
+* SongRepository
 
 ### templates
 *hello.html
 *helloworld.html
 *capitalize.html
 *allAlbums.html
+*allSongs.html
+*getreverse.html
+*oneAlbum.html
 
 
 ### Usage
@@ -42,8 +52,8 @@ Routes
 * /capitalize/{hello world} output: HELLO WORLD
 * /getreverse: will reverse Hello world! >>> world! hello
 
-* /albums: will take to albums
-
+* /albums: will take to albums and you can add albums info
+* /songs: shows every songs you checked
 * /albums: will display all albums in database
 * includes POST route to add new albums to the database and redirects to /albums to display
 
