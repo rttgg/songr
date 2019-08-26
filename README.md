@@ -59,3 +59,5 @@ Routes
 
 ### Reference 
 * Class Demo https://github.com/codefellows/seattle-java-401d5/tree/master/class-12/introToSpringDemo
+* Help from Nhu Trinh and Jackie
+
