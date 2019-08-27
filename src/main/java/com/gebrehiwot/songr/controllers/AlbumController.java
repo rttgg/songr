@@ -34,22 +34,15 @@
 
 
 
-<<<<<<< HEAD
         @PostMapping("/albums")
         public RedirectView addAlbum(String title, String artist, int songCount, double length, String imageUrl){
             Album a = new Album(title, artist, songCount,length,imageUrl);
             albumRepository.save(a);
             return new RedirectView("/albums");
         }
-=======
-    @PostMapping("/albums")
-    public RedirectView addAlbum(String title, String artist, int songCount, double length, String imageUrl){
-        Album a = new Album(title, artist, songCount,length,imageUrl);
-        albumRepository.save(a);
-        return new RedirectView("/albums");
 
-    }
->>>>>>> c87a8839fb13643e0213e5bdee76662320561eaa
+
+
 
         @GetMapping("/albums/{id}")
         public String getOneAlbum(@PathVariable long id, Model m){
@@ -60,11 +53,6 @@
             return "oneAlbum";
         }
 
-<<<<<<< HEAD
-    }
-=======
-}
 
     }
-}
->>>>>>> c87a8839fb13643e0213e5bdee76662320561eaa
+

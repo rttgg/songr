@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-    package com.gebrehiwot.songr.models;
-=======
+
 
 package com.gebrehiwot.songr.models;
->>>>>>> c87a8839fb13643e0213e5bdee76662320561eaa
+
 
 
     import javax.persistence.*;
@@ -48,8 +46,4 @@ package com.gebrehiwot.songr.models;
             return album;
         }
     }
-<<<<<<< HEAD
-=======
-}
 
->>>>>>> c87a8839fb13643e0213e5bdee76662320561eaa
